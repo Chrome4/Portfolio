@@ -1,4 +1,7 @@
-body {}
+body {
+  margin: 0px;
+  padding: 0px;
+}
 
 .header-background {
   background-color: rgb(40, 43, 45);
@@ -60,6 +63,13 @@ main {
   border-right: solid rgb(0, 0, 0) 5px;
 }
 
+/* About me img */
+.about-me img {
+  width: auto;
+  height: auto;
+  padding: 20px;
+}
+
 /* About me Text style */
 .about-me p {
   font-size: 25px;
@@ -82,28 +92,44 @@ main {
   font-size: 50px;
   font-family: 'Times New Roman', Times, serif;
   border: solid rgb(30, 33, 33) 5px;
+  border-radius: 10px;
   background-color: aqua;
   box-shadow: 5px 5px 10px black;
   display: flex;
   justify-content: center;
 }
 
-/* My work positioning */
+/* My work boxes positioning */
 .my-work {
   display: flex;
   flex-direction: row;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
 
 /* My work boxes */
-.text-box1,
+.text-box1 {
+  padding: 30px 25% 30px 25%;
+  margin: 100px;
+  width: 20%;
+  font-size: 20px;
+  font-style: normal;
+  color: white;
+  border: solid black 5px;
+  background-color: rgb(30, 33, 33);
+  box-shadow: 20px 20px 20px rgb(47, 46, 44);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
 .text-box2,
 .text-box3,
 .text-box4,
 .text-box5 {
   margin: 100px;
-  padding: 20px 60px 20px 60px;
+  padding: 30px 60px 30px 60px;
   font-size: 20px;
   font-style: normal;
   color: white;
@@ -122,6 +148,7 @@ div p {
   text-decoration: underline;
 }
 
+/* */
 .contact {
   display: flex;
   justify-content: space-evenly;
@@ -140,6 +167,7 @@ div p {
   font-size: 30px;
   margin-top: 50px;
   font-style: italic;
+  text-decoration: underline;
 }
 
 footer {
@@ -148,4 +176,17 @@ footer {
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
   background-color: aqua;
+}
+
+article>*:hover {
+  background-color: rgba(57, 60, 60, 0.79);
+  cursor: pointer;
+}
+
+.contact a:hover {
+  color: white;
+}
+
+nav a:hover {
+  color: white;
 }
