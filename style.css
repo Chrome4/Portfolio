@@ -1,13 +1,25 @@
+:root {
+  --color1: aqua;
+  --color2: rgba(40, 43, 45, 0.356);
+  --color3: black;
+  --header: rgb(30, 33, 33);
+  --mainBackground: rgba(128, 128, 128, 0.322);
+  --boxShadow: rgb(47, 46, 44);
+  --borders: black;
+  --cardColors: rgb(30, 33, 33);
+  --linksHover: white;
+}
+
 body {
   margin: 0px;
   padding: 0px;
 }
 
 .header-background {
-  background-color: rgb(40, 43, 45);
+  background-color: var(--header);
   height: 100%;
   width: 100%;
-  border: solid black 5px;
+  border: solid var(--borders) 5px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -16,7 +28,7 @@ body {
 /* Header style and position */
 header {
   font-size: 50px;
-  background-color: aqua;
+  background-color: var(--color1);
   border: solid;
   border-radius: 10px;
   margin-top: 150px;
@@ -31,7 +43,7 @@ nav {
 /* Nav links style */
 nav a {
   font-size: 25px;
-  color: aqua;
+  color: var(--color1);
   padding: 15px;
 }
 
@@ -43,7 +55,7 @@ subtitle p {
 }
 
 main {
-  background-color: rgba(128, 128, 128, 0.322);
+  background-color: var(--mainBackground);
 }
 
 /* About me positioning */
@@ -60,7 +72,7 @@ main {
   margin-left: 10%;
   margin-right: 10%;
   padding-right: 150px;
-  border-right: solid rgb(0, 0, 0) 5px;
+  border-right: solid var(--borders) 5px;
 }
 
 /* About me img */
@@ -73,16 +85,16 @@ main {
 /* About me Text style */
 .about-me p {
   font-size: 25px;
-  background-color: rgba(40, 43, 45, 0.356);
+  background-color: var(--color2);
   font-style: normal;
   font-family: 'Times New Roman', Times, serif;
   line-height: 3;
   margin-right: 30px;
   padding: 0 10px 0 10px;
-  border-left: solid aqua 5px;
-  border-right: solid aqua 5px;
+  border-left: solid var(--color1) 5px;
+  border-right: solid var(--color1) 5px;
   border-radius: 10px;
-  box-shadow: 10px 10px 10px rgb(47, 46, 44);
+  box-shadow: 10px 10px 10px var(--boxShadow);
 }
 
 /* My work header style and position */
@@ -91,9 +103,9 @@ main {
   margin: 20px;
   font-size: 50px;
   font-family: 'Times New Roman', Times, serif;
-  border: solid rgb(30, 33, 33) 5px;
+  border: solid var(--borders) 5px;
   border-radius: 10px;
-  background-color: aqua;
+  background-color: var(--color1);
   box-shadow: 5px 5px 10px black;
   display: flex;
   justify-content: center;
@@ -116,12 +128,16 @@ main {
   font-size: 20px;
   font-style: normal;
   color: white;
-  border: solid black 5px;
-  background-color: rgb(30, 33, 33);
-  box-shadow: 20px 20px 20px rgb(47, 46, 44);
+  border: solid var(--borders) 5px;
+  background-color: var(--cardColors);
+  box-shadow: 20px 20px 20px var(--boxShadow);
   display: flex;
   justify-content: center;
   flex-direction: column;
+}
+
+.text-box1 img {
+  min-width: 100%;
 }
 
 .text-box2,
@@ -133,14 +149,14 @@ main {
   font-size: 20px;
   font-style: normal;
   color: white;
-  border: solid black 5px;
-  background-color: rgb(30, 33, 33);
-  box-shadow: 20px 20px 20px rgb(47, 46, 44);
+  border: solid var(--borders)5px;
+  background-color: var(--cardColors);
+  box-shadow: 20px 20px 20px var(--boxShadow);
 }
 
 /* Box img styling */
 div img {
-  border: solid aqua 10px;
+  border: solid var(--color1) 10px;
 }
 
 /* Box Text */
@@ -148,21 +164,23 @@ div p {
   text-decoration: underline;
 }
 
-/* */
+/* Contact position and color*/
 .contact {
   display: flex;
   justify-content: space-evenly;
   padding: 50px 0px 50px 0px;
-  background-color: rgba(40, 43, 45, 0.356);
-  border-top: solid black 5px;
-  border-bottom: solid black 5px;
+  background-color: var(--color2);
+  border-top: solid var(--borders) 5px;
+  border-bottom: solid var(--borders) 5px;
 }
 
+/* Contact Header */
 .contact h2 {
   font-size: 50px;
   font-family: 'Times New Roman', Times, serif;
 }
 
+/* Contact links */
 .contact a {
   font-size: 30px;
   margin-top: 50px;
@@ -175,18 +193,19 @@ footer {
   justify-content: center;
   font-size: 20px;
   font-family: 'Times New Roman', Times, serif;
-  background-color: aqua;
+  background-color: var(--color1);
 }
 
+/* Hover styling */
 article>*:hover {
   background-color: rgba(57, 60, 60, 0.79);
   cursor: pointer;
 }
 
 .contact a:hover {
-  color: white;
+  color: var(--linksHover);
 }
 
 nav a:hover {
-  color: white;
+  color: var(--linksHover)
 }
